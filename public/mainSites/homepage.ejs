@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Home </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"Home"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"home"}) %>
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/createPostMenu.ejs", {path:"home"}) %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+
+
+        <div id="mainWrapper">
+            <div id="postsWrapper">
+                <%- include("../importedSites/topBar.ejs") %>
+                
+                <% data.posts.sort((a,b)=>{
+                    return 0.5 - Math.random()
+                }) %>
+            
+                <% for(var post of data.posts){ %>     
+                    <%- include("../importedSites/posts.ejs", {post:post} ) %>
+                <% } %>
+                    
+            </div>
+        </div>
+    </body>
+
+    
+</html>

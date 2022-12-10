@@ -1,0 +1,20 @@
+
+@media all and ( min-width:0px ) and  ( max-width:390px ){
+
+    .supportPageContentTitle, .galleryPageContentTitle{
+        font-size:1.5em;
+    }
+
+    .supportPageContentText, .galleryPageContentText{
+        font-size:0.9em;
+    }
+
+    .supportPageContentTitle::before, .galleryPageContentTitle::before{
+        font-size:1.2em;
+    }
+
+    .closeTitleQoute{
+        font-size:1.2em;
+    }
+
+}

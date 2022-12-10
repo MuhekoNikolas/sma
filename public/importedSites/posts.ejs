@@ -1,0 +1,68 @@
+
+
+<% function removeUrls(data) { %>
+    <% urlFinderRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g %>
+    <% newData = data.replaceAll(urlFinderRegex, "URL") %>
+    <% return newData %>
+<% } %>
+<% post.textContent = removeUrls(post.textContent) %>
+
+<% if(post.author.banned == false) { %>
+    <!--Just like the side menu, this is an imported template that generates post templates given the post information.-->
+    <div class="postObjectPreview" data-postId="<%= post.uniqueId %>">
+        <button class="postActionMenuButton" onclick="managePostOptionMenu(this)">
+            <span class="fa-solid fa-ellipsis"></span>
+        </button>
+
+        <div class="postActionMenu">
+            <p style="position:relative; left: calc( 100% - 75px ); top:20px; cursor:pointer; color:red; font-size:15px; display:block; margin-right:20px;" onclick="managePostOptionMenu(mennuToClose= this.parentNode )">Close</p>
+            <% if(data.loggedInUser.uniqueId == post.author.uniqueId || data.loggedInUser.admin == true) { %> 
+                <h3 onclick="editPost(postId= <%= post.uniqueId %>, authorId= <%= post.author.uniqueId %>, element=this.parentNode.parentNode)">Edit</h3>
+                <h3 onclick="deletePost(postId= <%= post.uniqueId %>, authorId= <%= post.author.uniqueId %>, element=this.parentNode.parentNode)">Delete</h3>
+            <% } else { %>
+                <h3 onclick="reportPost(postId=<%= post.uniqueId %>, authorId=<%= post.author.uniqueId %>, element=this.parentNode.parentNode)">Report</h3>
+            <% } %> 
+        </div>
+
+
+        <p class="postObjectCreatedAtDate"> <%= post.uploadedOn %> </p>
+
+        <div class="postObjectAuthorDetails">
+            <div class="postObjectAuthorPfp" style="background-image: url('<%= post.author.pfp %>');">
+            </div>
+            <div class="postObjectAuthorUsernames" onclick="redirect(`<%= post.author.url %>`)">
+                <h1 class="postObjectAuthorDisplayName">
+                    <%= post.author.displayName %>
+                </h1>
+                <h3 class="postObjectAuthorUniqueName">
+                    <%= post.author.uniqueName %>
+                </h3>
+            </div>
+            <div class="postObjectAuthorBadges">
+                <% allBadgeInds = Object.keys(post.author.badges) %>
+                <% allBadgeInds.sort((a,b)=>{
+                    if(post.author.badges[a].priority < post.author.badges[b].priority){
+                        return 1
+                    } else {
+                        return -1
+                    }
+                }) %>
+
+                <% for( badgeInd of allBadgeInds ){ %>
+                    <% badge=post.author.badges[badgeInd] %>
+                    <i title="<%= badge.name %>" style="color: <%= badge.cssColor %>;" class="postAuthorBadge fa-solid <%- badge.icon %>"></i>
+                <% } %>
+            </div>
+            
+        </div>
+        
+        <div class="postObjectPreviewContent">
+            <a style="text-decoration:none;" href="<%= post.url %>"> <h1 class="postObjectPreviewTitle"> <%= post.title %> </h1> </a>
+
+            <h2 class="postObjectPreviewTextContent"><%= post.textContent %></h2>
+
+            <a class="readmore" href="<%= post.url %>">read more</a>
+        </div>
+    </div>
+    <!--END BLOCK-->
+<% } %>

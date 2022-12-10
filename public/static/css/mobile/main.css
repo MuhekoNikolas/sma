@@ -1,0 +1,447 @@
+
+@media all and ( min-width:0px ) and  ( max-width:900px ) {
+
+    :root{
+        --device:mobile;
+    }
+
+    #mainWrapper{
+        width:100vw !important;
+
+        margin:0px auto !important;
+
+    }
+
+    
+    .createPostButton{
+        position:fixed;
+        bottom:50px;
+        left: calc( 100vw - 100px ) !important;
+    }
+
+    .createPostMenu{
+        position:relative;
+        left:-100vw;
+        
+        z-index:1000 !important;
+
+        width:90vw !important;
+    }
+
+    .createPostMenu.slideIn{ 
+        left:5vw !important;
+        animation:slideIn .5s 1 ease-in-out;
+    }
+    
+    .createPostMenu.slideOut{    
+        left:-100vw;
+        animation:slideOut .5s 1 ease-in-out;
+    }
+
+        
+    .settingMenu.slideIn{ 
+        left:0px !important;
+        animation:slideInSetting .5s 1 ease-in-out;
+    }
+
+    .settingMenu.slideOut{    
+        left:-100vw;
+        animation:slideOutSetting .5s 1 ease-in-out;
+    }
+
+
+    .createPostMenuTitleInput{
+        width:300px;
+        font-size:1.9em;
+    }
+    
+    .createPostMenuContentInput{
+        width:350px;
+        font-size:1.9em;
+    }
+
+    .settingMenu{
+        top:0px !important;
+        left:-100vw;
+        
+        z-index:1000 !important;
+
+        width:100vw !important;
+        height:100vh !important;
+    }
+
+    .settingsMenuTopSection{
+        position:relative;
+        left:-20px;
+
+        gap:20px;
+    
+        width:300px;
+        height:200px;
+    }
+
+    .settingsMenuNamesSection{
+        width:600px !important;
+    }
+
+    .settingsMenuNamesSection input{
+        top:-5px;
+
+        width:150px;
+        height:30px;
+    }
+
+    .settingsMenuNamesSection label{
+        font-size:.9em !important;
+
+        transform:translate(-50%, 0px);
+
+        white-space:nowrap !important;
+
+        margin-right:20px;
+    }
+    
+
+    
+    .settingsMenuSaveButton{
+
+        width:50px;
+        height:60px;
+
+        font-size:.8em;
+    }
+
+    .settingsMenuDownSection{
+        position:relative;
+    
+        width:100%;
+        height:400px;
+
+        display:grid;
+        justify-content:center;
+    }
+
+    .settingsMenuPfpSelectionSection{
+        width:350px;
+        height:auto;
+    }
+
+    .settingsMenuPfpSelectionDiv{
+        top:-40px;
+    
+        width:70%;
+
+        grid-template-columns:repeat( 3 , 50px );
+    }
+
+    
+    .settingsMenuPfpSelectionDiv div{
+        left:0px;
+
+        width:80px;
+        height:80px;
+    }
+
+
+    .topBar{
+        display:block !important;
+    }
+
+    #sideMenu{
+        width:100vw;
+
+        z-index:200;
+
+        display:none;
+    }
+
+    .menuCloseButton{
+        display:grid !important;
+    }
+
+
+    .postObjectPreview{
+        width:350px;
+    }
+
+    .postActionMenuButton{
+        left:calc( 350px - 70px );
+    }
+
+    .postActionMenuButton span{
+        font-size:35px;
+    }
+
+    .postActionMenu{
+        left:calc( 350px - 220px );
+    }
+
+    .postObjectCreatedAtDate{
+        font-size:12px;
+    }
+
+    .postObjectAuthorDisplayName{
+        font-size:20px;
+    }
+
+    .postObjectAuthorUniqueName{
+        font-size:12px;
+    }
+
+    .postObjectPreviewTitle{
+        font-size:20px;
+    }
+
+    .postObjectPreviewTextContent{
+        font-size:15px;
+    }
+
+    .postObjectPreviewContent .readmore{
+        font-size:0.6em;
+    }
+
+
+    
+    .alertDiv{
+  
+        left:-1000vw;
+        bottom: 20px;
+
+        min-width:350px;
+        height:75px;
+
+        font-size:1em;
+    }
+
+    
+    @keyframes slideOutSetting{
+        from{
+            left:0px;
+        }
+        to{
+            left:-100vw;
+        }
+    }
+
+    @keyframes slideInSetting{
+        from{
+            left:-100vw;
+        }
+        to{
+            left:0px;
+        }
+    }
+
+    
+    @keyframes slideOut{
+        from{
+            left:5vw;
+        }
+        to{
+            left:-100vw;
+        }
+    }
+    
+    @keyframes slideIn{
+        from{
+            left:-100vw;
+        }
+        to{
+            left:5vw;
+        }
+    }
+
+}
+
+@media all and ( min-width:0px ) and  ( max-width:390px ){
+    .postObjectPreview{
+        width:310px;
+    }
+
+    .postActionMenuButton{
+        left:calc( 310px - 70px );
+    }
+
+    .postActionMenuButton span{
+        font-size:30px;
+    }
+
+    .postActionMenu{
+        width:170px;
+
+        left:calc( 350px - 220px );
+    }
+
+    .settingsMenuPfpSelectionDiv{
+        grid-template-columns:repeat( 3 , 60px );
+    }
+
+    
+    .settingsMenuPfpSelectionDiv div{
+        width:65px;
+        height:65px;
+    }
+
+
+    .createPostMenuTitleInput{
+        width:250px;
+        font-size:1.4em;
+    }
+    
+    .createPostMenuContentInput{
+        width:300px;
+        font-size:1.2em;
+    }
+
+    .usernameInputErrorField {
+        left:105px;
+    }
+    
+    .passwordInputErrorField {
+        left:120px;
+    }
+
+
+    .topBar h3{
+        font-size:1.2em !important;
+    }
+
+    
+
+}
+
+
+@media all and ( min-width:700px ) and  ( max-width:1000px ){
+    .postObjectPreview{
+        width:450px;
+    }
+
+    .postActionMenuButton{
+        left:calc( 450px - 70px );
+    }
+
+    .postActionMenuButton span{
+        font-size:40px;
+    }
+
+    .postActionMenu{
+        left:calc( 450px - 220px );
+    }
+
+    .postObjectCreatedAtDate{
+        font-size:15px;
+    }
+
+    .postObjectAuthorDisplayName{
+        font-size:30px;
+    }
+
+    .postObjectAuthorUniqueName{
+        font-size:17px;
+    }
+
+    .postObjectPreviewTitle{
+        font-size:22px;
+    }
+
+    .postObjectPreviewTextContent{
+        font-size:20px;
+    }
+
+    .postObjectPreviewContent .readmore{
+        font-size:.8em;
+    }
+
+    .settingMenu{
+        width:500px ;
+        height:90vh ;
+    }
+
+    .settingsMenuTopSection{
+        position:relative;
+        left:-20px;
+
+        gap:20px;
+    
+        width:300px;
+        height:200px;
+    }
+
+    .settingsMenuNamesSection{
+        width:600px !important;
+    }
+
+    .settingsMenuNamesSection input{
+        top:-5px;
+
+        width:150px;
+        height:30px;
+    }
+
+    .settingsMenuNamesSection label{
+        font-size:.9em !important;
+
+        transform:translate(-50%, 0px);
+
+        white-space:nowrap !important;
+
+        margin-right:20px;
+    }
+    
+
+    
+    .settingsMenuSaveButton{
+
+        width:50px;
+        height:60px;
+
+        font-size:.8em;
+    }
+
+    .settingsMenuDownSection{
+        position:relative;
+    
+        width:100%;
+        height:400px;
+
+        display:grid;
+        justify-content:center;
+    }
+
+    .settingsMenuPfpSelectionSection{
+        width:350px;
+        height:auto;
+    }
+
+    .settingsMenuPfpSelectionDiv{
+        top:-40px;
+    
+        width:70%;
+
+        grid-template-columns:repeat( 3 , 50px );
+    }
+
+    
+    .settingsMenuPfpSelectionDiv div{
+        left:0px;
+
+        width:80px;
+        height:80px;
+    }
+
+    .createPostMenu{
+        width:500px;
+    }
+
+    .createPostMenuTitleInput{
+        width:300px;
+        font-size:1.9em;
+    }
+    
+    .createPostMenuContentInput{
+        width:350px;
+        font-size:1.9em;
+    }
+
+
+}

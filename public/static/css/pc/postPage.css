@@ -1,0 +1,117 @@
+
+
+
+.postTextContent{
+    position:relative;
+    width:800px;
+    height:auto;
+
+
+    display:block;
+    margin:0px auto;
+    margin-top:100px;
+
+    background:none;
+}
+
+.postTextContentTitle{
+    position:relative;
+
+    color:white;
+    font-size:3em;
+    text-align:center;
+    font-family:Roboto,Helvetica,sans-serif;
+
+    white-space: pre-line; 
+
+    margin-bottom:50px;
+
+}
+
+.postTextContentText{
+
+    color:white;
+    font-size:1.5em;
+    font-family: Roboto, Helvetica,sans-serif;
+    font-weight:30;
+
+    white-space: pre-line; 
+}
+
+.postPageContentTextUrl{
+    font-size:.8em;
+}
+
+.postPageContentTextUrl {
+    background: transparent url(../../images/icons/link.jpg) center right no-repeat;
+    background-size:20px 20px;
+    padding-right: 22px;
+}
+
+.postPageContentTextImage{
+    width:auto;
+    height:auto;
+    max-width:700px;
+
+    display:block;
+    margin:0px auto;
+
+    border-radius:10px;
+}
+
+.postPageFooter{
+    position:relative;
+    float:right;
+
+    width:400px;
+    height:200px;
+
+    display:block;
+    margin-right:20px;
+
+    background:none;
+}
+
+.postPageFooter p{
+    position:relative;
+
+    color:white;
+    text-align:center;
+    font-size:1em;
+    font-weight:50;
+    font-family:Roboto,Helvetica,sans-serif;
+}
+
+.postPageFooter p[onclick]{
+    color:red;
+}
+
+
+.createPostMenu.slideOut{    
+    left:-100vw;
+    animation:slideOut .5s 1 ease-in-out;
+}
+
+.settingMenu.slideIn{ 
+    left:50px;
+    animation:slideIn .5s 1 ease-in-out;
+}
+
+
+@keyframes slideOut{
+    from{
+        left:50px;
+    }
+    to{
+        left:-100vw;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        left:-100vw;
+    }
+    to{
+        left:50px;
+    }
+}

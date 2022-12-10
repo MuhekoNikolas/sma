@@ -1,0 +1,55 @@
+
+
+
+.licensePageContentBox{
+    position:relative;
+
+    width:90%;
+    height:auto;
+
+    margin:0px auto;
+}
+
+.licensePageTitle{
+    color:white;
+    font-size:4.5em;
+    font-family:Roboto, Helvetica, sans-serif;
+    text-align:center;
+}
+
+.licensePageSectionLead{
+    color:white;
+    font-size:1.5em;
+    font-weight:10;
+    font-family:Roboto, Helvetica, sans-serif;
+}
+
+.licensePagePartnerContentsList li{
+    color:white;
+    font-size:1.5em;
+    font-family:Roboto, Helvetica,sans-serif;
+}
+
+.licensePagePartnersList li{
+    font-size:1.5em;
+    font-family:Roboto, Helvetica,sans-serif;
+}
+
+.licensePageWarningInformation{
+    width:80%;
+    height:auto;
+    min-height:100px;
+
+    color:orange;
+    text-align:center;
+    font-size:1.5em;
+    font-family:Roboto, Helvetica,sans-serif;
+
+    display:flex;
+    align-items:center;
+    margin:0px auto;
+
+    border-radius:20px;
+
+    background:var(--c4);
+}

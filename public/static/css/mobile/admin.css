@@ -1,0 +1,185 @@
+
+
+
+
+
+@media all and ( min-width:0px ) and  ( max-width:1000px ) {
+
+    
+    .adminPageWrappers{              
+        width:900px;
+    }
+
+    .adminPageReportedPostsWrapper{
+        width:900px;
+    }
+    
+    .adminPageAllUsersWrapper{
+        width:600px;
+    }
+
+    .adminUsersTable{
+        max-width:350px;
+    }
+    
+    .adminUserTableMainTitle{
+        height:60px;
+    
+        font-size:1em;
+    }
+
+    .adminUserTableRowTitles th{
+        font-size:.8em;
+        min-width:40px;
+    
+    }
+    
+    .adminUserTableRows td{
+        height:30px;
+        min-width:110px;
+    }
+
+    
+    .adminUserTableProfileInfoPfp{
+        height:25px;
+        width:25px;
+    }
+
+    .adminUserTableRows td{
+        font-size:11px;
+    }
+
+    .adminUserTableProfileInfoNames h4{
+        font-size:.5em;
+    }
+    
+    
+    .adminUserTableProfileInfoNames h6{
+        font-size:.3em;
+    }
+
+}
+
+
+@media all and ( min-width:0px ) and  ( max-width:390px ) {
+
+
+    
+    .adminPageWrappers{              
+        width:350px;
+    }
+
+    .adminPageReportedPostsWrapper{
+        width:350px;
+    }
+    
+    .adminPageAllUsersWrapper{
+        width:350px;
+    }
+
+    .adminUsersTable{
+        max-width:350px;
+    }
+    
+    .adminUserTableMainTitle{
+        height:60px;
+    
+        font-size:1em;
+    }
+
+    .adminUserTableRowTitles th{
+        font-size:.8em;
+        min-width:40px;
+    
+    }
+    
+    .adminUserTableRows td{
+        height:30px;
+        min-width:50px;
+    }
+
+    
+    .adminUserTableProfileInfoPfp{
+        height:25px;
+        width:25px;
+    }
+
+    .adminUserTableRows td{
+        font-size:11px;
+    }
+
+    .adminUserTableProfileInfoNames h4{
+        font-size:.5em;
+    }
+    
+    
+    .adminUserTableProfileInfoNames h6{
+        font-size:.3em;
+    }
+
+}
+
+
+@media all and ( min-width:390px ) and  ( max-width:500px ) {
+
+    .adminPageReportedPostsWrapper{
+        width:400px;
+    }
+    
+    .adminPageAllUsersWrapper{
+        width:400px;
+    }
+
+
+    .adminUsersTable{
+        max-width:90%;
+    }
+
+    .adminUserTableRows td{
+        height:30px;
+        min-width:70px;
+    }
+
+    
+    .adminUserTableProfileInfoPfp{
+        height:30px;
+        width:30px;
+    }
+
+    .adminUserTableRows td{
+        font-size:13px;
+    }
+}
+
+
+
+@media all and ( min-width:500px ) and  ( max-width:900px ) {
+
+    .adminPageReportedPostsWrapper{
+        width:500px;
+    }
+    
+    .adminPageAllUsersWrapper{
+        width:500px;
+    }
+
+
+    .adminUsersTable{
+        max-width:90%;
+    }
+
+    .adminUserTableRows td{
+        height:30px;
+        min-width:90px;
+    }
+
+    
+    .adminUserTableProfileInfoPfp{
+        height:30px;
+        width:30px;
+    }
+
+    .adminUserTableRows td{
+        font-size:13px;
+    }
+}

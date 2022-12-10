@@ -1,0 +1,18 @@
+
+
+<table class="adminUsersTable">
+    <tr class="adminUserTableMainTitle">
+        <th colspan="5">All Users</th>
+    </tr>
+    <tr class="adminUserTableRowTitles">
+        <th class="adminUserTableNameRow">Name</th>
+        <th>Unique Id</th>
+        <th>Admin</th>
+        <th>Banned</th>
+        <th>Posts</th>
+    </tr>
+    <% for(user of data.allUsers ){ %>
+        <%- include("./adminPageUserTableRows.ejs", {user:user}) %>
+    <% } %>
+
+</table>

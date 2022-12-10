@@ -1,0 +1,60 @@
+
+
+
+ .editPostTextContent{
+    position:relative;
+
+    width:90%;
+    height:auto;
+
+    margin:0px auto;
+    margin-top:100px;
+}
+
+.editPostTextContent textarea{
+    width:600px;
+
+    resize:none;
+
+    color:white;
+    font-family:Roboto,Helvetica, sans-serif;
+
+    display:block;
+    margin:0px auto;
+    margin-top:10px;
+
+    border-radius:10px;
+    
+    background:var(--c2);
+}
+
+.editPostMenuTitleInput{
+    text-align:center;
+    font-size:3em;
+}
+
+.editPostMenuContentInput{
+    width:700px !important;
+
+    font-size:1.5em;
+}
+
+.postPageSubmitButton{
+    position:relative;
+
+    cursor:pointer;
+
+    width:150px;
+    height:60px;
+
+    color:white;
+    font-size:2em;
+
+    display:block;
+    margin:0px auto;
+    margin-top:10px;
+
+    border-radius:20px;
+
+    background:var(--c6);
+}

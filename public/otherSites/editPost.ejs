@@ -1,0 +1,35 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME  %> - <%= data.pagePost.title %> </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage: data.pagePost.title }) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"editPost"}) %>
+
+    </head>
+
+    <body onload="(()=>{defineVariables();heightenFields()})()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"myPage"}) %>
+
+        <div id="mainWrapper">     
+            <%- include("../importedSites/topBar.ejs") %>           
+            <div class="editPostTextContent">
+                <textarea name="postTitle" class="editPostMenuTitleInput" oninput="growTextArea(this)" style="height: auto;"><%= data.pagePost.title %></textarea>
+                <textarea name="postContent" class="editPostMenuContentInput" oninput="growTextArea(this)" style="height: auto;"><%= data.pagePost.textContent %></textarea>
+            </div>
+
+            <button class="postPageSubmitButton" onclick="editPostDataDb(authorId=<%= data.pagePost.author.uniqueId %>, postId=<%= data.pagePost.uniqueId %>)">
+                Save
+            </button>
+                
+        </div>
+    </body>
+
+
+    
+</html>

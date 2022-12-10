@@ -1,0 +1,32 @@
+
+
+    <tr class="adminUserTableRows">
+        <td>
+            <div class="adminUserTableProfileInfo">
+                <a href="<%= user.url %>" style="display:inherit; align-items:center;">
+                    <div class="adminUserTableProfileInfoPfp" style="background:url(<%= user.pfp %>);"></div>
+                    <div class="adminUserTableProfileInfoNames">
+                        <h4><%= user.displayName %></h4>
+                        <h6><%= user.uniqueName %></h6>
+                    </div>
+                </a>
+            </div>
+        </td>
+
+        <td><%= user.uniqueId %></td>
+        <td>
+            <%if(user.admin==true){ %> 
+                <i class="fa-solid fa-check" style="color:green;"></i>
+            <% } else { %> 
+                <i class="fa-solid fa-x" style="color:red;"></i>
+            <% } %>
+        </td>
+        <td>
+            <%if(user.banned==true){ %> 
+                <i class="fa-solid fa-check" style="color:green;"></i>
+            <% } else { %> 
+                <i class="fa-solid fa-x" style="color:red;"></i>
+            <% } %>
+        </td>
+        <td><%= user.postCount %></td>
+    </tr>

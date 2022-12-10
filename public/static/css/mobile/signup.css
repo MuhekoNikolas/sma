@@ -1,0 +1,32 @@
+
+
+
+
+@media all and ( min-width:0px ) and  ( max-width:420px ){
+
+    #signupForm{
+        width:300px;
+    }
+
+    .signupH1{
+        font-size:70px;
+    }
+    
+    .signupInput{
+        width:300px;
+    }
+
+        
+    .usernameInput{
+        width:170px;
+    }
+
+    .passwordInput{ 
+        width:250px;  
+    }
+
+    .confirmPasswordInput{       
+        width:210px;
+    }
+
+}

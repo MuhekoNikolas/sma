@@ -1,0 +1,53 @@
+
+<% if(data.userLoggedIn == true && data.loggedInUser.admin==true) { %>
+    <div class="settingMenu adminSettingMenu">
+        <div class="settingMenuCloseButton" onclick="manageAdminSettingsMenu()">
+            <i class="fa-solid fa-close" style="color:red;"></i>
+        </div>
+
+        <div class="settingsMenutopMostection">
+            <% if(data.pageOwner.banned == false) {%>
+                <button onclick="manageAdminSettingsBan(userId=<%= data.pageOwner.uniqueId %>, action='ban', button=this)" >Ban</button>
+            <% } else { %>
+                <button onclick="manageAdminSettingsBan(userId=<%= data.pageOwner.uniqueId %>, action='unban', button=this)" >Unban</button>
+            <% } %>
+            <% if(data.pageOwner.admin == true) {%>
+                <button onclick="managePageOwnerAdmin(userId=<%= data.pageOwner.uniqueId %>, action='remove', button=this)" >Remove admin</button>
+            <% } else { %>
+                <button onclick="managePageOwnerAdmin(userId=<%= data.pageOwner.uniqueId %>, action='give', button=this)">Give admin</button>
+            <% } %>
+            <button onclick="adminLoginAsUser(userId=<%= data.pageOwner.uniqueId %>)">Login as <%= data.pageOwner.uniqueName %></button>
+        </div>
+
+        <div class="settingsMenuTopSection">
+            <div class="settingsMenuNamesSection">
+                <h2>Names</h2>
+                <div style="display:flex;">
+                    <label for="adminSettingsDisplayName" class="settingsDisplayNameInputLabel">Display name:</label>
+                    <input name="adminSettingsDisplayName" class="adminSettingsDisplayNameInput" type="text" placeholder="<%= data.pageOwner.displayName %>"></input>
+                </div>
+                <div style="display:flex;">
+                    <label for="adminSettingsUniqueName" class="settingsUniqueNameInputLabel">Username: </label>
+                    <input name="adminSettingsUniqueName" class="adminSettingsUniqueNameInput" type="text" placeholder="<%= data.pageOwner.uniqueName %>"></input>
+                </div>
+                <span class="settingsUsernameErrorField adminSettingsUsernameErrorField" ></span>
+            </div>
+
+            <div class="settingsMenuSaveButton adminSettingMenuSaveButton" data-pageOwner-id="<%= data.pageOwner.uniqueId %>" onclick="updateAdminSettingsData(this)">
+                <i class="fas fa-save"></i>
+            </div>
+
+        </div>
+        <div class="settingsMenuDownSection">
+            <div class="settingsMenuPfpSelectionSection">
+                <h2>Profile picture</h2>
+                <div class="settingsMenuPfpSelectionDiv">
+                    <% imageUrls = ["/static/images/pfps/fox.jpg","/static/images/pfps/demon.jpg","/static/images/pfps/ghosty.jpg","/static/images/pfps/green_pea.jpg","/static/images/pfps/hat_egg.jpg","/static/images/pfps/plate_egg.jpg","/static/images/pfps/red_thing.jpg","/static/images/pfps/robot.jpg","/static/images/pfps/sad_egg.jpg","/static/images/pfps/surprised_egg.jpg"] %>
+                    <% for( var imageUrl of imageUrls) { %>
+                        <div style="background-image:url('<%= imageUrl %>');" onclick="selectAdminSettingsPfp(this)" data-url="<%= imageUrl %>"></div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>

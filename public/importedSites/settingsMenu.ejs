@@ -1,0 +1,49 @@
+
+<% if(data.userLoggedIn == true) { %>
+    <div class="settingMenu">
+        <div class="settingMenuCloseButton" onclick="manageSettingsMenu()">
+            <i class="fa-solid fa-close" style="color:red;"></i>
+        </div>
+
+        <div class="settingsMenuTopSection">
+            <div class="settingsMenuNamesSection">
+                <h2>Names</h2>
+                <div style="display:flex;">
+                    <label for="settingsDisplayName" class="settingsDisplayNameInputLabel">Display name:</label>
+                    <input name="settingsDisplayName" class="settingsDisplayNameInput" type="text" placeholder="<%= data.loggedInUser.displayName %>"></input>
+                </div>
+                <div style="display:flex;">
+                    <label for="settingsUniqueName" class="settingsUniqueNameInputLabel">Username: </label>
+                    <input name="settingsUniqueName" class="settingsUniqueNameInput" type="text" placeholder="<%= data.loggedInUser.uniqueName %>"></input>
+                </div>
+                <span class="settingsUsernameErrorField"></span>
+            </div>
+            <div class="settingsMenuSaveButton" onclick="updateSettingsData(redirectFlag = '<%= redirectFlag %>')">
+                <i class="fas fa-save"></i>
+            </div>
+        </div>
+        <div class="settingsMenuDownSection">
+            <div class="settingsMenuPfpSelectionSection">
+                <h2>Profile picture</h2>
+                <div class="settingsMenuPfpSelectionDiv">
+                    <% imageUrls = ["/static/images/pfps/fox.jpg","/static/images/pfps/demon.jpg","/static/images/pfps/ghosty.jpg","/static/images/pfps/green_pea.jpg","/static/images/pfps/hat_egg.jpg","/static/images/pfps/plate_egg.jpg","/static/images/pfps/red_thing.jpg","/static/images/pfps/robot.jpg","/static/images/pfps/sad_egg.jpg","/static/images/pfps/surprised_egg.jpg"] %>
+                    <% for( var imageUrl of imageUrls) { %>
+                        <div style="background-image:url('<%= imageUrl %>');" onclick="selectSettingsPfp(this)" data-url="<%= imageUrl %>"></div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% } else { %>
+    <div class="settingMenu" style="z-index:100; width:calc(100vw - 450px); height:90vh; border-radius:20px; overflow:hidden; overflow-y:auto; background:var(--c2); display:flex; justify-content:center; align-items:center;">
+        <div>
+            <div class="settingMenuCloseButton" onclick="manageSettingsMenu()">
+                <i class="fa-solid fa-close" style="color:red;"></i>
+            </div>
+            <h1 style="color:white; text-align:center; font-size:2em; font-family:Roboto, Helvetica, sans-serif; display:block; margin-top:-70px;" >Section Locked... Login to continue</h1>
+            <a href="/login" style="color:var(--linksColor); font-size:1.5em; text-decoration:none; text-align:center; display:block;">Login</a>
+            <i class="fa-solid fa-lock" style="position:relative; top:50px; color:red; font-size:10em; text-align:center; display:block;"></i>
+        </div>
+    </div>
+<% } %>

@@ -1,0 +1,65 @@
+
+
+
+#postsWrapper{
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+    overflow-y:auto;
+    
+    background:none;
+}
+
+
+.createPostButton{
+    position:fixed;
+    bottom:50px;
+    left:calc(100vw - 450px);
+}
+
+.createPostMenu{
+    position:fixed;
+    top:5vh;
+    left:-100vw;
+}
+
+.createPostMenu.slideIn{ 
+    left:50px;
+    animation:slideIn .5s 1 ease-in-out;
+}
+
+.createPostMenu.slideOut{    
+    left:-100vw;
+    animation:slideOut .5s 1 ease-in-out;
+}
+
+.settingMenu.slideIn{ 
+    left:50px;
+    animation:slideIn .5s 1 ease-in-out;
+}
+
+.settingMenu.slideOut{    
+    left:-100vw;
+    animation:slideOut .5s 1 ease-in-out;
+}
+
+
+@keyframes slideOut{
+    from{
+        left:50px;
+    }
+    to{
+        left:-100vw;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        left:-100vw;
+    }
+    to{
+        left:50px;
+    }
+}

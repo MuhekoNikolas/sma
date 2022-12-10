@@ -1,0 +1,51 @@
+
+
+.unsplashContentMainDiv{
+    position:relative;
+
+    width:90%;
+    height:200px;
+
+    display:block;
+    margin:0px auto;
+
+}
+
+.unsplashLicense{
+    position:relative; 
+    margin-top:75px;
+}
+
+.galleryDiv{
+    position:relative; 
+
+    width:650px; 
+    min-height:500px; 
+    height:auto; 
+    
+    display:grid; 
+    grid-template-columns:repeat(3, 200px); 
+    grid-gap:10px; 
+
+    justify-content:center; 
+    align-items:center;  
+    margin:0px auto; 
+    padding:20px 0px;
+
+    border-radius:20px; 
+
+    background:var(--c4); 
+}
+
+.galleryGridItem{
+    width:150px; 
+    height:150px; 
+
+    cursor:pointer; 
+
+    border-radius:20px;
+
+    background-position:center center !important; 
+    background-size:cover !important; 
+    background-repeat:no-repeat !important; 
+}

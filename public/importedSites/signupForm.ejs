@@ -1,0 +1,22 @@
+
+
+
+<!--This is the Signup form thats imported into the signup.ejs document, It manages user creation.-->
+<div id="signupForm">
+    <h1 class="signupH1">Signup</h1>
+    
+    <input type="text" placeholder="username" class="signupInput usernameInput">
+    <div class="usernameInputErrorField errorField">
+                <span class="usernameInputErrorFieldSpan"></span>
+    </div>
+    <input type="password" placeholder="password" class="signupInput passwordInput">
+    <input type="password" placeholder="confirm password" class="signupInput confirmPasswordInput">
+    <div class="passwordInputErrorField errorField">
+        <span class="passwordInputErrorFieldSpan"></span>
+    </div>
+
+    <button type="submit" class="signupButton" onclick="startSignupProcess()">Signup</button>
+    
+    <h2 class="loginSuggestion">Already have an account <span onclick="redirect(`/login`)"> Login </span> </h2>      
+</div>
+<!--END BLOCK-->

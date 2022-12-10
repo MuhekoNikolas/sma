@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME  %> - <%= data.pagePost.title %> </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage: data.pagePost.title }) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"postPage"}) %>
+        
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"myPage"}) %>
+        
+        <div id="mainWrapper">     
+            <%- include("../importedSites/topBar.ejs") %>           
+            <div class="postTextContent">
+                <h1 class="postTextContentTitle">
+                    <%= data.pagePost.title %>
+                </h1>
+                <h3 class="postTextContentText">
+                    <%= data.pagePost.textContent  %>
+                </h3>
+            </div>
+            <div class="postPageFooter">
+                <p>Author: <span onclick="redirect('<%= data.pagePost.author.url %>')" style="cursor:pointer; color:var(--linksColor);"><%= data.pagePost.author.uniqueName %></span> </p>
+                <p style="margin-top:-10px;">Created on: <span><%= data.pagePost.uploadedOn %></span> </p>
+            </div>
+                
+        </div>
+    </body>
+
+    
+</html>

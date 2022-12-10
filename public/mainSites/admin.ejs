@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Login </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"Admin"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"admin"}) %>
+
+        <script src="/../static/js/admin.js" defer></script>
+        
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+        <div id="mainWrapper">  
+            <%- include("../importedSites/topBar.ejs") %> 
+
+            <h1 class="adminPageTilte">Admin Panel</h1>
+            <h3 class="adminPageSectionTilte">Reported Posts</h3>
+            <div class="adminPageReportedPostsWrapper adminPageWrappers">
+
+            </div>
+
+            <div class="adminPageAllUsersWrapper adminPageWrappers">
+              <%- include("../importedSites/adminPageUserTable.ejs") %>
+            </div>
+
+        </div>
+    </body>
+
+    
+</html>

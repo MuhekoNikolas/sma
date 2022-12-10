@@ -1,0 +1,89 @@
+
+li{
+    color:var(--c4);
+}
+.supportPageTitle, .galleryPageTitle{
+
+    color:white;
+    text-align:center;
+    font-size:3.5em;
+    font-family:Roboto, Helvetica, sans-serif;
+
+    display:block;
+    margin-top:100px;
+
+}
+
+.supportPageContent, .galleryPageContent{
+    position:relative;
+
+    min-width:50%;
+    max-width:80%;
+    height:auto;
+
+    display:block;
+    margin:0px auto;
+    margin-bottom:70px;
+
+    background:none;
+}
+
+.supportPageContentTitle, .galleryPageContentTitle{
+
+    color:white;
+    font-size:2em;
+    font-family:Roboto, Helvetica, sans-serif;
+}
+
+.supportPageContentText, .galleryPageContentText{
+    color:white;
+    font-family:Roboto, Helvetica, sans-serif;
+}
+
+.supportPageContentTitle::before, .galleryPageContentTitle::before{
+    content:'"';
+    position:absolute;
+
+    transform:translate(-25px, -15px) rotate(-5deg) !important;
+
+
+    color:var(--c4);
+    font-family:serif;
+    font-size:1.5em;
+}
+
+.closeTitleQoute{
+    position:relative;
+
+    color:var(--c4);
+    font-family:serif;
+    font-size:1.5em;
+
+    transform: translate(0px, 20px) rotate(-5deg) !important;
+
+}
+
+.supportPowerPointPresentationDiv{
+    position:relative;
+
+    max-width:500px;
+    height:400px;
+
+    display:block;
+    margin:0px auto;
+
+    box-shadow: 3px 6px 10px var(--c6);
+
+    background:var(--c7);
+}
+
+.supportPowerPointPresentationDiv iframe{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    display:block;
+    margin:auto;
+
+}

@@ -1,0 +1,23 @@
+
+
+<!--This creates a post creation menu in the document its imported into, it only does this if the client is logged in.-->
+<% if(data.userLoggedIn == true) { %> 
+    <div class="createPostButton" onclick="managePostCreationMenu()" style="z-index:100; cursor:pointer; width:50px; height:50px; border-radius:50px; box-shadow:inset 1px 0px 10px var(--c6), 4px 1px 5px #1c1c1c; background:var(--c2); display:flex; justify-content:center; align-items:center;">
+        <i class="fa-solid fa-plus" style="color:white; font-size:2em; font-weight:20;"></i>
+    </div>
+    <div class="createPostMenu" style="z-index:100; width:calc(100vw - 450px); height:90vh; border-radius:20px; overflow:hidden; overflow-y:auto; display:flex; justify-content:center; align-items:center; background:var(--c2);">
+        <div> 
+            <button class="createPostMenuCloseButton" onclick="managePostCreationMenu()">
+                <i class="fa-solid fa-close" style="color:red;"></i>
+            </button>
+            <h1 class="createPostMenuTitle">Create Post</h1>
+            <label for="title" class="createPostMenuInputLabel">Title:</label>
+            <textarea name="title" class="createPostMenuTitleInput" oninput="growTextArea(this)"></textarea>
+
+            <label for="content" class="createPostMenuInputLabel">Content:</label>
+            <textarea name="content" class="createPostMenuContentInput" resizable=false oninput="growTextArea(this)"></textarea>
+            <button type="submit" class="createPostMenuUploadButton" onclick="uploadPost('<%= path %>')">Upload</button>
+        </div>
+    </div>
+<% } %>
+<!--END BLOCK-->

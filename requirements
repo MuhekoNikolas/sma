@@ -1,0 +1,9 @@
+
+required npm packages:
+    1. express (A nodejs backend framework) - npm install express
+    2. ejs (A web engine) - npm install ejs
+    3. nedb (A lightweight database) - npm install nedb
+    4. axios (A networking package for node) - npm install axios
+    5. bcrypt (A password hashing package) -npm install bcrypt
+    6. cookie-parser (A cookie manager for node js) - npm install cookie-parser
+

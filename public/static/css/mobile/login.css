@@ -1,0 +1,47 @@
+
+
+
+@media all and ( min-width:0px ) and  ( max-width:900px ) {
+
+
+}
+
+@media all and ( min-width:0px ) and  ( max-width:420px ){
+    #loginForm{
+        width:350px;
+    }
+
+    
+    .loginH1{       
+        font-size:70px;
+    }
+
+    .loginInput{
+        width:180px;
+        height:40px;
+    
+    }
+
+    .usernameInput{
+        width:180px;
+    }
+    
+    .passwordInput{
+
+        margin-bottom:-40px !important;
+        width:250px;
+    }
+
+    .usernameInputErrorField {
+        left:110px;
+    }
+    
+    .passwordInputErrorField {
+        left:140px;
+    }
+    
+    .errorField span{
+        left:-190px;
+    }
+
+}

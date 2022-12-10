@@ -1,0 +1,20 @@
+
+<!--This is the Login form thats imported into the login.ejs document, It manages user login.-->
+<div id="loginForm">
+    <h1 class="loginH1">Login</h1>
+    
+    <input type="text" placeholder="username" class="loginInput usernameInput">
+    <div class="usernameInputErrorField errorField">
+                <span class="usernameInputErrorFieldSpan"></span>
+    </div>
+    <input type="password" placeholder="password" class="loginInput passwordInput">
+    <div class="passwordInputErrorField errorField">
+        <span class="passwordInputErrorFieldSpan"></span>
+    </div>
+    
+    <span class="resetPassSpan" onclick="redirect(`/support/forgot-Password`)" style="">Forgot my password</span>
+    <button type="submit" class="loginButton" onclick="startLoginProcess()">Login</button>
+    
+    <h2 class="signupSuggestion">I dont have an account <span onclick="redirect(`/signup`)"> Signup </span> </h2>      
+</div>
+<!--END BLOCK-->

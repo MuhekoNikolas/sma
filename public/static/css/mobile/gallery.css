@@ -1,0 +1,44 @@
+
+
+
+
+
+@media all and ( min-width:0px ) and  ( max-width:900px ) {
+    .galleryPageContentTitle{
+        text-align:center; 
+    }
+
+    .galleryDiv{
+        position:relative; 
+    
+        width:90vw; 
+        min-height:500px; 
+        height:auto; 
+        
+        display:grid; 
+        grid-template-columns:repeat(3, 100px); 
+        grid-gap:10px; 
+    }
+
+    .galleryGridItem{
+        width:100px; 
+        height:100px; 
+    }
+
+}
+
+
+@media all and ( min-width:700px ) and  ( max-width:1000px ){
+    .galleryDiv{
+        width:90%; 
+        min-height:300px; 
+
+        grid-template-columns:repeat(4, 100px); 
+    }
+
+    
+    .galleryGridItem{
+        width:100px; 
+        height:100px; 
+    }
+}

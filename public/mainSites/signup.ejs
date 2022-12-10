@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Signup </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"Signup"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"signup"}) %>
+        
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        <div id="mainWrapper">        
+            <%- include("../importedSites/topBar.ejs") %>       
+            <%- include("../importedSites/signupForm.ejs") %>
+                
+        </div>
+    </body>
+
+                
+</html>

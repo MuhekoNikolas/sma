@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Unsplash License </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"Support"}) %>
+
+                
+        <link rel="stylesheet" href="/../static/css/pc/support.css">
+        <link rel="stylesheet" href="/../static/css/mobile/support.css">    
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"gallery"}) %>
+
+        <style>
+
+        </style>
+
+
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+        <div id="mainWrapper">            
+            <%- include("../importedSites/topBar.ejs") %>
+            <div class="unsplashContentMainDiv">
+
+                <div class="unsplashLicense">
+                    <h1 class="galleryPageContentTitle">
+                        Licenses.<span class="closeTitleQoute">"</span>
+                    </h1>
+                    <h3 class="galleryPageContentText">
+                        <a href="https://unsplash.com/license" style="position:relative; font-size:1.1em; color:antiquewhite; display:block; text-align:center;" target="_blank">Unsplash.com</a>
+                        <br>
+                        Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
+                    </h3>
+                    <p style="font-size:1.4em; color:white; text-align:center; display:block; font-family:Roboto, Helvetica, sans-serif; margin-top:20px;">Protected Content</p>
+                    <div class="galleryDiv">
+                       <% unsplashObjects = {
+                            "0":{
+                                "url":"https://unsplash.com/photos/xyVIi4GN5Os",
+                                "image":"/../static/images/pfps/demon.jpg"
+                            },
+                            "1":{
+                                "url":"https://unsplash.com/photos/0rxLLHD1XxA",
+                                "image":"/../static/images/pfps/fox.jpg"
+                            },
+
+                            "2":{
+                                "url":"https://unsplash.com/photos/YmTIxQbQo4I",
+                                "image":"/../static/images/pfps/ghosty.jpg"
+                            },
+
+                            "3":{
+                                "url":"https://unsplash.com/photos/rTCDPl3C_os",
+                                "image":"/../static/images/pfps/green_pea.jpg"
+                            },
+
+                            
+                            "4":{
+                                "url":"https://unsplash.com/photos/K-sdQ12jZeY",
+                                "image":"/../static/images/pfps/hat_egg.jpg"
+                            },
+
+                            
+                            "5":{
+                                "url":"https://unsplash.com/photos/g-1HnkApDik",
+                                "image":"/../static/images/pfps/plate_egg.jpg"
+                            },
+
+                            "6":{
+                                "url":"https://unsplash.com/photos/xVWSP1rvZcM",
+                                "image":"/../static/images/pfps/red_thing.jpg"
+                            },
+
+                            "7":{
+                                "url":"https://unsplash.com/photos/unt3066GV-E",
+                                "image":"/../static/images/pfps/robot.jpg"
+                            },
+
+                            "8":{
+                                "url":"https://unsplash.com/photos/WtolM5hsj14",
+                                "image":"/../static/images/pfps/sad_egg.jpg"
+                            },
+
+                            "9":{
+                                "url":"https://unsplash.com/photos/t0Bv0OBQuTg",
+                                "image":"/../static/images/pfps/surprised_egg.jpg"
+                            },
+
+                            "10":{
+                                "url":"https://unsplash.com/photos/t0Bv0OBQuTg",
+                                "image":"/../static/images/pfps/loggedout.jpg"
+                            }
+
+                       } %>
+                        <% for(unsplashObjInd of Object.keys(unsplashObjects)){ %>
+                            <% unsplashObj = unsplashObjects[unsplashObjInd] %> 
+                            <a href="<%= unsplashObj.url %>" target="_blank">
+                                <div class="galleryGridItem" style="background:url(<%= unsplashObj.image %>); "></div>
+                            </a>
+                        <% } %>
+                    </div>
+                 </div>
+
+            </div>
+                
+        </div>
+    </body>
+
+    
+</html>

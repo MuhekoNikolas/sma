@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - <%= data.pageOwner.uniqueName %> </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage: data.pageOwner.uniqueName }) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"userProfile"}) %>
+
+        <% if(data.loggedInUser.admin == true) { %>
+            <script src="../static/js/adminSettings.js" defer ></script>
+        <% } %>
+            
+    </head>
+
+    <body onload="defineVariables()">
+
+        <%- include("../importedSites/sideMenu.ejs",{data}) %>
+        <% if(data.loggedInUser.uniqueId == data.pageOwner.uniqueId && data.loggedInUser.bot == false ) { %>
+            <%- include("../importedSites/createPostMenu.ejs",{path:"userProfile"}) %>
+        <% } %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"myPage"}) %>
+        <%- include("../importedSites/adminSettingsMenu.ejs") %>
+
+        <div id="mainWrapper">
+            <%- include("../importedSites/topBar.ejs") %>
+            <div class="userProfilePreview">
+                <div class="userProfilePreviewSection userProfilePreviewInfoSection">
+                    <div class="userProfilePreviewFlexSubSectionGroup">
+                            <div class="userProfilePreviewSubSection userProfilePreviewUsernamesSubSection">
+                                <h1 class="userProfilePreviewDisplayName"><%= data.pageOwner.displayName %></h1>
+                                <h3 class="userProfilePreviewUniqueName"><%= data.pageOwner.uniqueName %></h3>
+                            </div>
+                            <div class="userProfilePreviewSubSection userProfilePreviewBadgesSubSection">
+                                <% allBadgeInds = Object.keys(data.pageOwner.badges) %>
+                                <% allBadgeInds.sort((a,b)=>{
+                                    if(data.pageOwner.badges[a].priority < data.pageOwner.badges[b].priority){
+                                        return 1
+                                    } else {
+                                        return -1
+                                    }
+                                }) %>
+                                <% for(badgeInd of allBadgeInds ) { %> 
+                                    <% badge=data.pageOwner.badges[badgeInd] %>
+                                    <i title="<%= badge.name %>" style="color: <%= badge.cssColor %>; " class="userProfilePreviewBadge fa-solid <%= badge.icon %>"></i>
+                                <% } %>
+                            </div>
+                    </div>
+                    <div class="userProfilePreviewSubSection userProfilePreviewStatsSubSection">
+                        <div>
+                            <p class="sideMenuProfilePreviewStatsStatName">
+                                Posts
+                            </p>
+                            <p class="sideMenuProfilePreviewStatsStatNumber postCount">
+                                <%= data.pageOwner.postCount %>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="sideMenuProfilePreviewStatsStatName">
+                                Join Date
+                            </p>
+                            <p class="sideMenuProfilePreviewStatsStatNumber">
+                                <%= data.pageOwner.joinDate %>
+                            </p>
+                        </div>
+                        <% if(data.pageOwner.uniqueName == data.loggedInUser.uniqueName) { %>
+                            <div class="userProfilePreviewSettingsStat" style="text-align:center; display:grid; justify-content:center; align-items:center; cursor:pointer;" onclick="manageSettingsMenu()">
+                                <i class="fa-solid fa-cog" style="position:relative; text-align:center; color:white; font-size:2rem;"></i>
+                            </div>
+                        <% } else if( data.loggedInUser.admin == true ) {%>
+                            <div class="userProfilePreviewSettingsStat" style="text-align:center; display:grid; justify-content:center; align-items:center; cursor:pointer;" onclick="manageAdminSettingsMenu(settingsFor='<%= data.pageOwner.uniqueId %>')">
+                                <i class="fa-solid fa-hammer" style="position:relative; text-align:center; color:white; font-size:2rem;"></i>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="userProfilePreviewSection userProfilePreviewPfpSection" style="background-image: url(<%= data.pageOwner.pfp %>);">
+                </div>
+                
+            </div>
+            <div class="userProfilePosts">
+                <% if(data.pageOwner.posts.length > 0) { %>
+                    <% for( var post of data.pageOwner.posts ) { %>
+                        <%- include("../importedSites/posts.ejs", {post:post}) %>
+                    <% } %>
+                <% } else { %>
+                    <p style="color:white; text-align:start; font-size:.9rem; margin-left:50px; margin-top:50px;">Nothing to see here...</p>
+                <% } %>
+            </div>
+                
+        </div>
+    </body>
+
+    
+</html>

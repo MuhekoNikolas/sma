@@ -1,0 +1,69 @@
+
+
+
+
+@media all and ( min-width:1050px ) and  ( max-width:1150px ) {
+    .postTextContent{
+        width:800px;    
+    }
+    
+
+    .postPageContentTextImage{
+        height:auto;
+        max-width:600px;
+    }
+
+}
+
+
+@media all and ( min-width:900px ) and  ( max-width:1050px ) {
+    .postTextContent{
+        width:600px;    
+    }
+
+    .postPageContentTextImage{
+        height:auto;
+        max-width:500px;
+    }
+
+}
+
+@media all and ( min-width:0px ) and  ( max-width:900px ) {
+    .postTextContent{
+        width:100vw;    
+    }
+
+    .postTextContentTitle{
+        font-size:2.3em;
+    
+    }
+
+    
+    .postTextContentText{
+        font-size:1em;
+        text-align:center;
+
+        margin-top:-40px;
+        padding-left:0px;
+    }
+
+    .postPageContentTextImage{
+        height:auto;
+        max-width:500px;
+    }
+}
+
+@media all and ( min-width:390px ) and  ( max-width:520px ) {
+    .postPageContentTextImage{
+        height:auto;
+        max-width:400px;
+    }
+}
+
+
+@media all and ( min-width:0px ) and  ( max-width:390px ) {
+    .postPageContentTextImage{
+        height:auto;
+        max-width:300px;
+    }
+}

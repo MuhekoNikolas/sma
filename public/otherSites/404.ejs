@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - 404 </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"404"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"support"}) %>
+        
+
+        <style>
+
+            #mainWrapper{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            ._404pageContentBox{
+                position:relative;
+
+                width:80%;
+                height:300px;
+
+                display:block;
+                margin:0px auto;
+
+                background:none;
+            }
+
+            ._404pageContentBox h1{
+                position:relative;
+
+                color:red;
+                font-size:4em;
+                font-family:Roboto,Helvetica, sans-serif;
+            }
+            ._404pageContentBox span{
+                color:white;
+                font-size:1.5em;
+                font-family:Roboto,Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+        <div id="mainWrapper">  
+            <%- include("../importedSites/topBar.ejs") %>          
+            <div class="_404pageContentBox">
+                <h1>404</h1>
+                <span> The page you were looking for wasnt found... <br>Go to <a href="/">Home</a></span>
+            </div>
+                
+        </div>
+    </body>
+
+    
+</html>

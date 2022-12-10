@@ -1,0 +1,118 @@
+
+
+<!--This is the side Menu, Its in a seperate file so that Its easier to just import it into multiple documents.-->
+<div id="sideMenu">
+    <div class="menuCloseButton" onclick="manageSideMenu()"><i class="fa-solid fa-close"></i></div>
+    <div class="sideMenuContent">
+
+            <div class="sideMenuProfilePreview">
+                <div style="position:relative; top:5%; width:90%; height:80%; display:block; margin:10% 5% !important;">
+                    <!--Different rendering of the side Menu profile info div depending on the login state of the user.-->
+                    <% if(data.userLoggedIn==true) {%>
+                        <div class="sideMenuProfilePreviewPfp" style="background-image: url(<%= data.loggedInUser.pfp %>);">
+                        </div>
+                            <h1 class="sideMenuProfilePreviewDisplayName">
+                                <%= data.loggedInUser.displayName %>
+                            </h1>
+                            <h3 class="sideMenuProfilePreviewUniqueName">
+                                <%= data.loggedInUser.uniqueName %>
+                            </h3>
+                        
+                            <a href="/logout" title="Logout Page" style="position:relative; left:20px; color:red; text-decoration:none; font-size:2em;" class="fa-solid fa-right-from-bracket"></a>
+                    <% } else { %>
+                                            <div class="sideMenuProfilePreviewPfp" style="background-image: url(/../static/images/pfps/loggedout.jpg);">
+                        </div>
+                            <h1 class="sideMenuProfilePreviewDisplayName">
+                                Guest
+                            </h1>
+                            <h3 class="sideMenuProfilePreviewUniqueName">
+                                @guest
+                            </h3>
+                    <% } %>
+                    <!--END BLOCK-->
+                </div>
+                
+            </div>
+            <!--Dropdown that links to important documents-->
+            <div class="sideMenuDropdowns navigationDropdown" onclick="manageDropDownMenu(`.sideBarNavigationMenu`, `.navigationDropdown`)">
+                <h1>Navigation <span class="fa-solid fa-caret-down"></span> </h1>
+            </div>
+            <div class="dropdownMenu sideBarNavigationMenu hidden">
+                <div class="sideBarNavigationMenuMainLinks">
+                    <a href="/" title="Home Page">Home 
+                        <% if(data.currentPage == "home") { %>
+                            <i class="fa-solid fa-location-dot"></i>
+                        <% } %>
+                    </a> 
+                    <a href="/login" title="Login Page">Login
+                        <% if(data.currentPage == "login") { %>
+                            <i class="fa-solid fa-location-dot"></i>
+                        <% } %>
+                    </a>
+                    <a href="/signup" title="Signup Page">Signup
+                        <% if(data.currentPage == "signup") { %>
+                            <i class="fa-solid fa-location-dot"></i>
+                        <% } %>
+                    </a>
+                    <% if(data.userLoggedIn == true ) { %>
+                        <a href="/users/@me" title="My Page">My page
+ 
+                            <% if(data.currentPage == "userPage" && data.loggedInUser.uniqueId == data.pageOwner.uniqueId) { %>
+                                <i class="fa-solid fa-location-dot"></i>
+                            <% } %>
+                        </a>
+                        <% if(data.loggedInUser.admin == true ) { %>
+                            <a href="/admin" title="Admin Page">Admin
+     
+                                <% if(data.currentPage == "admin") { %>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                <% } %>
+                            </a>
+                        <% } %>
+
+                    <% } %>
+
+                </div>
+                <div class="sideBarNavigationMenuOtherLinks" onclick="manageSideMenu()">
+                    <a href="/support#privacy_policy" onclick="manageSideMenu()">Privacy</a>
+                    <a href="/support#terms_of_service" onclick="manageSideMenu()">TOS</a>
+                    <a href="/support#about_us" onclick="manageSideMenu()">About</a>
+                    <a href="/support#careers" onclick="manageSideMenu()">Careers</a>
+                </div>
+                
+            </div>
+            <!--END BLOCK-->
+        
+          
+            <!--This dropdown contains the themes for website customisation-->
+            <div class="sideMenuDropdowns themesDropdown" onclick="manageDropDownMenu(`.sideBarThemesMenu`, `.themesDropdown`)">
+                <h1>Themes <span class="fa-solid fa-caret-down"></span> </h1>
+            </div>
+            <div class="dropdownMenu sideBarThemesMenu hidden">
+                <div>
+                    <div class="themeMenuTheme" onclick="changeThemeColor('Normal')" style="cursor:pointer;">
+                        <div class="normalThemeBall"></div>
+                        <p>Normal</p>
+                    </div>
+                    <div class="themeMenuTheme" onclick="changeThemeColor('Green-Gray')">
+                        <div class="greenyThemeBall"></div>
+                        <p>Greeny</p>
+                    </div>
+                    <div class="themeMenuTheme" onclick="changeThemeColor('Spices')">
+                        <div class="spicesThemeBall"></div>
+                        <p>Spices</p>
+                    </div>
+                </div>
+            </div>
+            <!--END BLOCK-->
+            
+            <!--Not really a dropdown, but more of a button. It manages the Settings Menu when clicked-->
+            <div class="sideMenuDropdowns settingsDropdown" onclick="manageSettingsMenu()">
+                <h1>Settings <span class="fa-solid fa-cog"></span> </h1>
+            </div>
+            <div class="dropdownMenu sideBarSettingsMenu hidden">
+            </div>
+            <!---->
+    </div>
+</div>
+<!--END BLOCK-->

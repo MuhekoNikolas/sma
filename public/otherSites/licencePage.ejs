@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Licences </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"License"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"license"}) %>
+        
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+        <div id="mainWrapper">  
+            <%- include("../importedSites/topBar.ejs") %>  
+            
+            <div class="licensePageContentBox">
+                <h1 class="licensePageTitle">Licensing</h1>
+                <h3 class="licensePageSectionLead">SMA partners with other services to provide content including but not limited to:</h3>
+                <ul class="licensePagePartnerContentsList">
+                    <li>Images / Media </li>
+                    <li>Literature </li>
+                </ul>
+    
+                <h3 class="licensePageSectionLead">Our partners:</h3>
+                <ul class="licensePagePartnersList">
+                    <a href="#"><li style="color:white;"><a href="?provider=unsplash"> Unsplash.com </a> - licence()</li></a>
+                    <a href="#"><li style="color:white;"><a href="https://poetrydb.org/index.html"> poetryDB.org </a> - licence(GNU General Public License v2.0)</li></a>
+                </ul>
+    
+                <div class="licensePageWarningInformation">*Failure to respect the partner's license will result into action being taken on your account.*</div>
+    
+            </div>
+           
+            
+                
+        </div>
+    </body>
+
+    
+</html>

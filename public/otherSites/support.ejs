@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> <%= data.config.NAME %> - Support </title>
+        <link rel="icon" href="<%= data.config.favicon %>" type="image/x-icon">
+
+        <%- include("../importedSites/meta.ejs", {currentPage:"Support"}) %>
+        <%- include("../importedSites/linksAndScripts.ejs", {currentPage:"support"}) %>
+        
+        
+    </head>
+
+    <body onload="defineVariables()">
+        <%- include("../importedSites/sideMenu.ejs") %>
+        <%- include("../importedSites/settingsMenu.ejs", {redirectFlag:"normal"}) %>
+        
+        <% function genText(){ %>
+            <% return "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices neque ornare aenean euismod elementum. Imperdiet nulla malesuada pellentesque elit eget. Dictumst vestibulum rhoncus est pellentesque elit. Lobortis feugiat vivamus at augue. Sed tempus urna et pharetra pharetra massa. Diam ut venenatis tellus in metus vulputate eu. Non nisi est sit amet. Vestibulum sed arcu non odio euismod lacinia. Non enim praesent elementum facilisis. Pretium vulputate sapien nec sagittis. Quam lacus suspendisse faucibus interdum posuere lorem ipsum. Mi quis hendrerit dolor magna eget. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Vulputate dignissim suspendisse in est ante in nibh. In metus vulputate eu scelerisque felis imperdiet proin. Felis donec et odio pellentesque diam volutpat commodo sed. Non curabitur gravida arcu ac. Consectetur lorem donec massa sapien faucibus et molestie. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Blandit turpis cursus in hac habitasse platea. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Varius vel pharetra vel turpis nunc eget lorem. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. Sagittis eu volutpat odio facilisis. Condimentum lacinia quis vel eros donec. Facilisi cras fermentum odio eu feugiat pretium. Quis vel eros donec ac odio tempor. Vivamus at augue eget arcu dictum varius duis. Tellus id interdum velit laoreet id. Risus in hendrerit gravida rutrum quisque non. Facilisi etiam dignissim diam quis enim. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Tellus id interdum velit laoreet id. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Eget nunc lobortis mattis aliquam faucibus purus in. Nisi scelerisque eu ultrices vitae auctor eu. Elementum nisi quis eleifend quam adipiscing vitae proin. Id velit ut tortor pretium. Viverra accumsan in nisl nisi scelerisque. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Lectus vestibulum mattis ullamcorper velit. Lobortis mattis aliquam faucibus purus in massa. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Maecenas pharetra convallis posuere morbi leo urna. Vel orci porta non pulvinar neque. Donec ultrices tincidunt arcu non sodales neque sodales ut. Est ultricies integer quis auctor elit sed vulputate mi sit. At tellus at urna condimentum mattis pellentesque id nibh tortor. Aliquet risus feugiat in ante metus dictum. Lectus proin nibh nisl condimentum. Congue eu consequat ac felis donec et odio. Lectus mauris ultrices eros in cursus. Vel facilisis volutpat est velit egestas. Faucibus purus in massa tempor nec feugiat nisl pretium. Malesuada fames ac turpis egestas integer eget. Nibh venenatis cras sed felis eget. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Amet mauris commodo quis imperdiet. Turpis egestas integer eget aliquet nibh praesent. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Nunc faucibus a pellentesque sit. Quam vulputate dignissim suspendisse in est ante in. Dictum at tempor commodo ullamcorper a. Ac turpis egestas integer eget aliquet. Tincidunt tortor aliquam nulla facilisi cras. Sagittis nisl rhoncus mattis rhoncus. Bibendum ut tristique et egestas. Montes nascetur ridiculus mus mauris. Amet massa vitae tortor condimentum lacinia quis vel eros donec. A scelerisque purus semper eget duis at tellus. Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Arcu non odio euismod lacinia at quis. Nullam ac tortor vitae purus faucibus ornare. In dictum non consectetur a erat. Amet mauris commodo quis imperdiet. Ante metus dictum at tempor commodo ullamcorper a. Eu non diam phasellus vestibulum lorem sed risus ultricies tristique. Mauris in aliquam sem fringilla. Vel risus commodo viverra maecenas accumsan lacus. Vulputate ut pharetra sit amet aliquam id diam. Sed egestas egestas fringilla phasellus faucibus. Turpis in eu mi bibendum neque egestas congue. Feugiat in ante metus dictum at. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Vitae tempus quam pellentesque nec. In massa tempor nec feugiat nisl pretium fusce. Purus in massa tempor nec. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Egestas sed sed risus pretium quam vulputate. Et tortor at risus viverra. Amet dictum sit amet justo donec enim diam vulputate. Velit sed ullamcorper morbi tincidunt ornare. Porttitor eget dolor morbi non arcu risus. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Interdum varius sit amet mattis vulputate enim nulla. In egestas erat imperdiet sed euismod nisi." %>
+            <% } %>
+        <div id="mainWrapper">     
+            <%- include("../importedSites/topBar.ejs") %>       
+            <h1 class="supportPageTitle">Support</h1>
+            <div class="supportPageContent">
+             
+
+                <div id="forgot_password">
+                
+                    <h1 class="supportPageContentTitle">
+                        I forgot my Password.<span class="closeTitleQoute">"</span>
+                    </h1> 
+                    <h3 class="supportPageContentText">
+                        <%- genText().substring(0,300) %>
+                    </h3>
+                    
+                </div>
+
+                <div id="privacy_policy">
+                    
+                    <h1 class="supportPageContentTitle">
+                        Privacy Policy.<span class="closeTitleQoute">"</span>
+                    </h1>
+                    <h3 class="supportPageContentText">
+                        <%- genText().substring(0,600) %>
+                    </h3>
+                
+                </div>
+
+                <div id="terms_of_service">
+                    
+                    <h1 class="supportPageContentTitle">
+                        TOS.<span class="closeTitleQoute">"</span>
+                    </h1>
+                    <h3 class="supportPageContentText">
+                        <%- genText().substring(0,400) %>
+                    </h3>
+                    
+                </div>
+
+                <div id="licences">
+                    
+                    <h1 class="supportPageContentTitle">
+                        Licences.<span class="closeTitleQoute">"</span>
+                    </h1>
+                    <h3 class="supportPageContentText">
+                        By continuing to use this app, you agree to respect <a href="licences">our partners' licences.</a>
+                    </h3>
+                
+                </div>
+
+                <div id="careers">
+                
+                    <h1 class="supportPageContentTitle">
+                        Careers.<span class="closeTitleQoute">"</span>
+                    </h1>                
+                    <h3 class="supportPageContentText">
+                        <%- genText().substring(0,600) %>
+                    </h3>
+                    
+                </div>
+
+                <div id="about_us">
+                
+                    <h1 class="supportPageContentTitle">
+                        About us.<span class="closeTitleQoute">"</span>
+                    </h1>
+                    <h3 class="supportPageContentText">
+                        <%- genText().substring(0,600) %>
+                    </h3>
+                
+                    <div class="supportPowerPointPresentationDiv">
+                        <iframe src="https://onedrive.live.com/embed?cid=7FE30C2767BBF41E&amp;resid=7FE30C2767BBF41E%219567&amp;authkey=AFDw-om49hs8cd0&amp;em=2&amp;wdAr=1.7777777777777777" width="476px" height="288px"></iframe>
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+    </body>
+
+    
+</html>

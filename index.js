@@ -29,8 +29,6 @@ importantObjects = {
     secretsDb
 }
 
-
-
 //setup express app
 const app = express()
 app.set("view engine", "ejs")

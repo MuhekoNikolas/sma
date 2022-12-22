@@ -79,7 +79,7 @@ function markColor(obj){
 
     colorRegex = /\[<%#?(\w)+>\]/g
     colorMatches = elText.match(colorRegex)
-    console.log(colorMatches, elText)
+    //console.log(colorMatches, elText)
     if(colorMatches == null ){return obj}
 
 
@@ -94,14 +94,17 @@ function markColor(obj){
             closeTagIndex = openTagIndex + (colorMatches.length-2)
         }
 
+        if(openTagIndex == -1){
+            openTagIndex = 0
+        }
+
         uncoloredText = document.createElement("span")
         uncoloredText.innerText = elText.substring(lastIndex, openTagIndex)
         elementToReturn.append(uncoloredText)
-        console.log(uncoloredText.innerText)
 
         textToColor = elText.substring(openTagIndex+colorMatch.length, closeTagIndex).trim()
 
-        console.log(textToColor, openTagIndex, colorMatch, color, closeTagIndex, elText.substring(openTagIndex, closeTagIndex+(colorMatch.length+1)))
+        //console.log(textToColor, openTagIndex, colorMatch, color, closeTagIndex, elText.substring(openTagIndex, closeTagIndex+(colorMatch.length+1)))
 
         coloredText = document.createElement("span")
         coloredText.innerText = textToColor
@@ -117,7 +120,6 @@ function markColor(obj){
     lastText.innerText = elText.substring(lastIndex, elText.length)
     elementToReturn.append(lastText)
 
-    console.log(lastText.innerText, "3")
     obj = {
         element:elementToReturn
     }

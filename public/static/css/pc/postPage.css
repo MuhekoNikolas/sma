@@ -13,8 +13,8 @@
     padding:10px;
 
     border-radius:10px;
-
-    background:var(--c5);
+    
+    background:none;
 }
 
 .postTextContentTitle{
@@ -27,7 +27,7 @@
 
     white-space: pre-line; 
 
-    margin-bottom:50px;
+    margin-bottom:25px;
 
 }
 
@@ -50,17 +50,19 @@
     padding-right: 22px;
 }
 
-.postPageContentTextUrl:hover::before{
+.postPageContentTextUrl:hover::after{
     content:"";
     position:absolute;
 
-    transform:translate(0px, 25px );
+    transform:translate(-100%, 25px );
 
-    width:80px;
+    width:90px;
     height:2px;
 
     animation:.2s 1 ease-in-out postPageTexturlSlideIn;
 
+     white-space:inherit;
+    
     background:red;
 }
 
@@ -72,7 +74,7 @@
     max-width:700px;
 
     display:block;
-    margin:20px auto;
+    margin:5px 10px;
 
     border-radius:10px;
 }
@@ -139,6 +141,6 @@
         width:0px;
     }
     to{
-        width:80px;
+        width:90px;
     }
 }

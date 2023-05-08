@@ -2,7 +2,6 @@
 
 //npm packages
 const express = require("express")
-const vhost = require("vhost")
 const dataStore = require("nedb")
 const axios = require("axios")
 const cookieParser = require("cookie-parser")

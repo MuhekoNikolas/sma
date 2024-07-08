@@ -1,7 +1,7 @@
 
 
 ## About
-This is a project I did as part of my highschool information technology project.
+This is a project I did as part of my highschool information technology project. SMA stands for "Social Media App", and its supposed to be some sort of blog/literature site, where users submit both text and media for others to read and view.
 
 ## Project plan and route structure
 Project Idea.

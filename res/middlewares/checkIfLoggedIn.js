@@ -3,7 +3,7 @@
 const dataStore = require("nedb")
 const axios = require("axios")
 const cookieParser = require("cookie-parser")
-const bcrypt = require("bcrypt")
+const bcrypt = require("../dependecies/bcrypt.js")
 
 //Custom modules
 const functions = require("../functions.js")

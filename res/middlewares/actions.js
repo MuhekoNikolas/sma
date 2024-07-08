@@ -3,7 +3,7 @@
 const express = require("express")
 const dataStore = require("nedb")
 const axios = require("axios")
-const bcrypt = require("bcrypt")
+const bcrypt = require("../dependecies/bcrypt.js")
 
 //custom dependancies
 const config = require("../../metaData")

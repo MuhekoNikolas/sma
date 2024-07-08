@@ -60,5 +60,5 @@ require("./routes/POST")(app,importantObjects)
 
 //deploy app
 app.listen(config.PORT, () => {
-    console.log("App is running ")
+    console.log(`App is running on: http://localhost:${config.PORT}`)
 })

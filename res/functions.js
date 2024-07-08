@@ -26,7 +26,7 @@ function generateUser(displayName = "John Doe", pfp = "/../static/images/pfps/lo
         banned: false,
         admin: false,
 
-        badges: []
+        badges: {}
     }
     return userObject
 }

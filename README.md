@@ -5,18 +5,18 @@ This is a project I did as part of my highschool information technology project.
 
 ## Project plan and route structure
 Project Idea.
-    - A website where people can write text for others to read.
+- A website where people can write text for others to read.
 
 Pages.
-    - Login Page (/login) https://sma.3525nikolas.repl.co/login
-    - Signup page (/signup) https://sma.3525nikolas.repl.co/signup
-    - Home Page (/) https://sma.3525nikolas.repl.co/
-    - User profile page (/users/<@username>) https://sma.3525nikolas.repl.co/users/@niko
-    - Post page (/users/< @username >/posts/< postId >) https://sma.3525nikolas.repl.co/users/@niko/posts/1
-    - Admin page (/admin) https://sma.3525nikolas.repl.co/admin
-    - Support page (/support) https://sma.3525nikolas.repl.co/support
-    - Licenses page (/license) https://sma.3525nikolas.repl.co/licences
-    - Unsplach license (/licences?provider=unsplash) https://sma.3525nikolas.repl.co/licences?provider=unsplash
+- Login Page (/login) https://sma.3525nikolas.repl.co/login
+- Signup page (/signup) https://sma.3525nikolas.repl.co/signup
+- Home Page (/) https://sma.3525nikolas.repl.co/
+- User profile page (/users/<@username>) https://sma.3525nikolas.repl.co/users/@niko
+- Post page (/users/< @username >/posts/< postId >) https://sma.3525nikolas.repl.co/users/@niko/posts/1
+- Admin page (/admin) https://sma.3525nikolas.repl.co/admin
+- Support page (/support) https://sma.3525nikolas.repl.co/support
+- Licenses page (/license) https://sma.3525nikolas.repl.co/licences
+- Unsplach license (/licences?provider=unsplash) https://sma.3525nikolas.repl.co/licences?provider=unsplash
 
 /login and /signup are inaccesible by logged in users, /admin is accesible by only admins.
 
